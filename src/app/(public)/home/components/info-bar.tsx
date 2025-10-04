@@ -5,19 +5,19 @@ const mock = [
   {
     title: "Destaques da coleção",
     description: "Novas maquiagens e tendências em beleza.",
-    link: "https://example.com/novidades",
+    link: "",
     icon: <Star className="h-6 w-6 shrink-0" />,
   },
   {
     title: "Siga nossas redes sociais",
-    description: "@example_beauty_store",
-    link: "https://example.com/social",
+    description: "@b8one",
+    link: "",
     icon: <Instagram className="h-6 w-6 shrink-0" />,
   },
   {
     title: "Frete grátis acima de R$199",
     description: "Aproveite ofertas exclusivas em toda a loja.",
-    link: "https://example.com/promocoes",
+    link: "",
     icon: <Truck className="h-6 w-6 shrink-0" />,
   },
 ];
@@ -39,7 +39,7 @@ export function InfoBar() {
 
               <div className="flex flex-col">
                 {item.title && (
-                  <p className="text-lg font-bold">{item.title}</p>
+                  <p className="text-lg font-bold uppercase">{item.title}</p>
                 )}
                 {item.description && (
                   <p className="text-sm">{item.description}</p>

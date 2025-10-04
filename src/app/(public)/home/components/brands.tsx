@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { Section } from "@/components/public/section/section";
@@ -6,33 +6,33 @@ import { Section } from "@/components/public/section/section";
 const mockedBrands = [
   {
     brandId: "1",
-    name: "",
-    imageUrl: "",
+    name: "Knoll",
+    imageUrl: "/images/brands/knoll.png",
   },
   {
     brandId: "2",
-    name: "",
-    imageUrl: "",
+    name: "Gucci",
+    imageUrl: "/images/brands/gucci.png",
   },
   {
     brandId: "3",
-    name: "",
-    imageUrl: "",
+    name: "Calvin Klein",
+    imageUrl: "/images/brands/ck.png",
   },
   {
     brandId: "4",
-    name: "",
-    imageUrl: "",
+    name: "Chanel",
+    imageUrl: "/images/brands/chanel.png",
   },
   {
     brandId: "5",
-    name: "",
-    imageUrl: "",
+    name: "Dior",
+    imageUrl: "/images/brands/dior.png",
   },
   {
     brandId: "6",
-    name: "",
-    imageUrl: "",
+    name: "Dolce & Gabbana",
+    imageUrl: "/images/brands/dolce-gabbana.png",
   },
 ];
 
@@ -40,18 +40,18 @@ export function Brands() {
   const brands = mockedBrands
 
   return (
-    <Section positionBlur="left" bgColor="background" title="Marcas" id="brands">
+    <Section title="Marcas" id="brands" className="uppercase">
       <div className="flex flex-wrap justify-center gap-6">
         {brands.map((brand) => (
           <Link
-            href={`/vehicles?brands=${brand.brandId}`}
+            href={`/`}
             key={brand.brandId}
             className="
               group flex items-center justify-center
-              w-40 h-40 rounded-full
-              bg-zinc-950
+              w-40 h-40 rounded-full shadow-lg
+              bg-white
               transition-all duration-300
-              hover:bg-zinc-800 hover:scale-105
+              hover:scale-105
             "
           >
             <Image

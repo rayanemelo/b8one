@@ -8,31 +8,35 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon
+} from "lucide-react";
 
 const banners = [
   {
     id: 1,
     title: 'Banner 1',
-    imageDesktop: 'https://img.freepik.com/vetores-gratis/banner-de-maquiador-de-textura-plana-desenhada-a-mao_23-2149368285.jpg',
-    imageMobile: 'https://img.freepik.com/vetores-gratis/banner-de-maquiador-de-textura-plana-desenhada-a-mao_23-2149368285.jpg',
+    imageDesktop: '/images/banners/banner2.webp',
+    imageMobile: '/images/banners/banner2.webp',
   },
   {
     id: 2,
     title: 'Banner 2',
-    imageDesktop: 'https://img.freepik.com/vetores-gratis/modelo-de-banner-de-venda-de-beleza-realista_52683-94993.jpg?semt=ais_hybrid&w=740&q=80',
-    imageMobile: 'https://img.freepik.com/vetores-gratis/modelo-de-banner-de-venda-de-beleza-realista_52683-94993.jpg?semt=ais_hybrid&w=740&q=80',
+    imageDesktop: '/images/banners/banner1.jpg',
+    imageMobile: '/images/banners/banner1.jpg',
   },
   {
     id: 3,
     title: 'Banner 3',
-    imageDesktop: 'https://img.freepik.com/vetores-gratis/banner-de-maquiador-de-textura-plana-desenhada-a-mao_23-2149368286.jpg?semt=ais_hybrid&w=740&q=80',
+    imageDesktop: '',
     imageMobile: ''
   },
   {
     id: 4,
     title: 'Banner 4',
     imageDesktop: '',
-    imageMobile: 'https://img.freepik.com/vetores-gratis/post-de-facebook-de-maquiador-desenhado-a-mao_23-2149381460.jpg?semt=ais_incoming&w=740&q=80'
+    imageMobile: ''
   },
 ]
 
@@ -74,8 +78,12 @@ export function Banners() {
           );
         })}
       </CarouselContent>
-      <CarouselPrevious className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-200 transition" />
-      <CarouselNext className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-200 transition" />
+      <CarouselPrevious className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-black border-none hover:bg-black/50  text-white hover:text-white h-10 w-10">
+        <ChevronLeftIcon strokeWidth={2.5} />
+      </CarouselPrevious>
+      <CarouselNext className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-black border-none hover:bg-black/50 text-white hover:text-white h-10 w-10">
+        <ChevronRightIcon strokeWidth={2.5} />
+      </CarouselNext>
     </Carousel>
   )
 }
