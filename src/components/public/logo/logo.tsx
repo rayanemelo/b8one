@@ -6,5 +6,5 @@ export function Logo() {
     <Link href="/" className="flex items-center gap-2">
       <Image src="/images/svg/logo.svg" alt="Logo" width={60} height={60} />
     </Link>
-  )
+  );
 }

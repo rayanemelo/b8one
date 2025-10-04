@@ -6,41 +6,35 @@ import { AddToCartButton } from "../add-to-cart-button/add-to-cart-button";
 import { formatToReal } from "@/utils/money";
 import { WishlistButton } from "../wishlist-button/wishlist-button";
 
-const ProductCard = React.forwardRef<HTMLDivElement, Product>(
-  (product, ref) => {
-    return (
-      <div>
-        <Card
-          ref={ref}
-          key={product.id}
-          className="p-4 border-none transition cursor-pointer"
-        >
-          <div className="relative w-full bg-white h-[375px]">
-            <Link
-              href="/"
-            >
-              <Image
-                src={product.images[0]}
-                alt={`Imagem do veículo ${product.title}`}
-                fill
-                className="object-contain"
-              />
-            </Link>
-            <WishlistButton />
-          </div>
+const ProductCard = React.forwardRef<HTMLDivElement, Product>((product, ref) => {
+  return (
+    <div>
+      <Card ref={ref} key={product.id} className="cursor-pointer border-none p-4 transition">
+        <div className="relative h-[375px] w-full bg-white">
+          <Link href="/">
+            <Image
+              src={product.images[0]}
+              alt={`Imagem do veículo ${product.title}`}
+              fill
+              className="object-contain"
+            />
+          </Link>
+          <WishlistButton />
+        </div>
 
-          <h3 className="font-medium mt-2 text-black truncate uppercase text-left">
-            {product.title}
-          </h3>
-          <p className="text-lg font-bold text-black my-1 text-left">
-            {formatToReal(product.price)}
-          </p>
-          <AddToCartButton onClick={() => { console.log(`Adicionado ${product.title} ao carrinho`); }} />
-        </Card>
-      </div>
-    );
-  }
-);
+        <h3 className="mt-2 truncate text-left font-medium uppercase text-black">
+          {product.title}
+        </h3>
+        <p className="my-1 text-left text-lg font-bold text-black">{formatToReal(product.price)}</p>
+        <AddToCartButton
+          onClick={() => {
+            console.log(`Adicionado ${product.title} ao carrinho`);
+          }}
+        />
+      </Card>
+    </div>
+  );
+});
 
 ProductCard.displayName = "Product";
 

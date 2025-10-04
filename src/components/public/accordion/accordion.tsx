@@ -35,7 +35,7 @@ const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
         <AccordionContent className="pb-0">{children}</AccordionContent>
       </AccordionItem>
     </ShadcnAccordion>
-  )
+  ),
 );
 
 Accordion.displayName = "Accordion";

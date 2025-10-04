@@ -3,8 +3,8 @@ import { Logo } from "@/components/public/logo/logo";
 
 export function Header() {
   return (
-    <header className="md:flex hidden justify-center h-20 w-full bg-white px-4 shadow-lg">
-      <div className="flex justify-between items-center max-w-9xl w-full">
+    <header className="hidden h-20 w-full justify-center bg-white px-4 shadow-lg md:flex">
+      <div className="flex w-full max-w-9xl items-center justify-between">
         <Logo />
         <div className="flex items-center gap-9">
           <CartButton />

@@ -6,18 +6,11 @@ type CardProps = React.ComponentProps<"div">;
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
   ({ className, children, ...props }, ref) => {
     return (
-      <div
-        ref={ref}
-        className={twMerge(
-          "w-full  border p-6",
-          className
-        )}
-        {...props}
-      >
+      <div ref={ref} className={twMerge("w-full border p-6", className)} {...props}>
         {children}
       </div>
     );
-  }
+  },
 );
 
 Card.displayName = "Card";

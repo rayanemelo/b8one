@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "img.freepik.com",
-      }
+      },
     ],
   },
   rewrites: async () => {
@@ -19,7 +19,7 @@ const nextConfig: NextConfig = {
       {
         source: "/",
         destination: "/home",
-      }
+      },
     ];
   },
 };

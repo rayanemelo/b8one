@@ -13,7 +13,7 @@ export function Social({
     <Link
       href={href}
       aria-label={label}
-      className="flex h-9 w-9 items-center justify-center rounded-lg border text-white bg-black"
+      className="flex h-9 w-9 items-center justify-center rounded-lg border bg-black text-white"
     >
       {children}
     </Link>

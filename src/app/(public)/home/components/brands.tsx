@@ -37,7 +37,7 @@ const mockedBrands = [
 ];
 
 export function Brands() {
-  const brands = mockedBrands
+  const brands = mockedBrands;
 
   return (
     <Section title="Marcas" id="brands" className="uppercase">
@@ -46,24 +46,14 @@ export function Brands() {
           <Link
             href={`/`}
             key={brand.brandId}
-            className="
-              group flex items-center justify-center
-              w-40 h-40 rounded-full shadow-lg
-              bg-white
-              transition-all duration-300
-              hover:scale-105
-            "
+            className="group flex h-40 w-40 items-center justify-center rounded-full bg-white shadow-lg transition-all duration-300 hover:scale-105"
           >
             <Image
               src={brand.imageUrl}
               alt={`Link para a marca ${brand.name}`}
               width={80}
               height={80}
-              className="
-                object-contain drop-shadow
-                transition-transform duration-300
-                group-hover:scale-105
-              "
+              className="object-contain drop-shadow transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
         ))}

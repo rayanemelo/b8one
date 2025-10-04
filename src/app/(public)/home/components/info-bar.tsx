@@ -26,8 +26,8 @@ export function InfoBar() {
   const items = mock;
 
   return (
-    <div className="flex lg:flex-row flex-col justify-center items-center lg:gap-12 gap-6 bg-black text-white lg:h-28 px-2 lg:px-0 lg:py-0 py-5">
-      <div className="flex flex-col md:flex-row gap-8 md:gap-16">
+    <div className="flex flex-col items-center justify-center gap-6 bg-black px-2 py-5 text-white lg:h-28 lg:flex-row lg:gap-12 lg:px-0 lg:py-0">
+      <div className="flex flex-col gap-8 md:flex-row md:gap-16">
         {items.map((item, index) => {
           return (
             <Link
@@ -38,12 +38,8 @@ export function InfoBar() {
               <div className="text-white">{item.icon}</div>
 
               <div className="flex flex-col">
-                {item.title && (
-                  <p className="text-lg font-bold uppercase">{item.title}</p>
-                )}
-                {item.description && (
-                  <p className="text-sm">{item.description}</p>
-                )}
+                {item.title && <p className="text-lg font-bold uppercase">{item.title}</p>}
+                {item.description && <p className="text-sm">{item.description}</p>}
               </div>
             </Link>
           );

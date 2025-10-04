@@ -18,7 +18,7 @@ export function useProduct() {
       console.error("Failed to fetch products:", error);
       setIsLoading(false);
     }
-  }
+  };
 
   useEffect(() => {
     fetchProducts();

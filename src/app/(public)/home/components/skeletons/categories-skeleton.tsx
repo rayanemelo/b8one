@@ -8,16 +8,12 @@ type CategoriesSkeletonProps = React.ComponentProps<"div"> & {
   count?: number;
 };
 
-export function CategoriesSkeleton({
-  count = 8,
-  className,
-  ...props
-}: CategoriesSkeletonProps) {
+export function CategoriesSkeleton({ count = 8, className, ...props }: CategoriesSkeletonProps) {
   return (
     <div
       className={twMerge(
-        "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6",
-        className
+        "grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
+        className,
       )}
       {...props}
     >
@@ -28,16 +24,13 @@ export function CategoriesSkeleton({
   );
 }
 
-export function CategoryCardSkeleton({
-  className,
-  ...props
-}: React.ComponentProps<"div">) {
+export function CategoryCardSkeleton({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       className={twMerge(
-        "w-full h-28 px-4 rounded-xl bg-zinc-950/70 animate-pulse",
+        "h-28 w-full animate-pulse rounded-xl bg-zinc-950/70 px-4",
         "flex items-center gap-6",
-        className
+        className,
       )}
       {...props}
     >

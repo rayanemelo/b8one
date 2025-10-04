@@ -3,7 +3,7 @@ type ResponseProduct = {
   skip: number;
   limit: number;
   products: Product[];
-}
+};
 
 type Product = {
   id: number;
@@ -28,7 +28,7 @@ type Product = {
   meta: Meta;
   images: string[];
   thumbnail: string;
-}
+};
 
 enum AvailabilityStatus {
   InStock = "In Stock",
@@ -46,14 +46,14 @@ type Dimensions = {
   width: number;
   height: number;
   depth: number;
-}
+};
 
 type Meta = {
   createdAt: Date;
   updatedAt: Date;
   barcode: string;
   qrCode: string;
-}
+};
 
 enum ReturnPolicy {
   NoReturnPolicy = "No return policy",
@@ -69,4 +69,4 @@ type Review = {
   date: Date;
   reviewerName: string;
   reviewerEmail: string;
-}
+};

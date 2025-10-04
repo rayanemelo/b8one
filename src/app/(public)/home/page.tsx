@@ -1,5 +1,5 @@
 "use client";
-import { WhatsappButton } from "@/layout/public/whatsapp-button";
+import { WhatsappButton } from "@/layout/public/whatsapp-button/whatsapp-button";
 import { Suspense } from "react";
 import { Banners } from "./components/banners";
 import { Brands } from "./components/brands";

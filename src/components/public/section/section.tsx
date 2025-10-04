@@ -6,22 +6,16 @@ type Props = React.ComponentPropsWithoutRef<"section"> & {
   children: React.ReactNode;
 };
 
-export function Section({
-  title,
-  children,
-  className,
-  ...props
-}: Props) {
-
+export function Section({ title, children, className, ...props }: Props) {
   return (
     <section
       {...props}
       className={twMerge(
-        `relative flex flex-col items-center justify-center py-12 px-6 bg-[#F9F9F9]`,
-        className
+        `relative flex flex-col items-center justify-center bg-[#F9F9F9] px-6 py-12`,
+        className,
       )}
     >
-      <div className="flex flex-col gap-6 max-w-9xl w-full z-10">
+      <div className="z-10 flex w-full max-w-9xl flex-col gap-6">
         {title && <TitleSection title={title} />}
         <div className="flex flex-wrap gap-8">{children}</div>
       </div>

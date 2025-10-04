@@ -2,14 +2,7 @@
 
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
-import {
-  Mail,
-  MapPin,
-  Phone, Instagram,
-  Facebook,
-  Youtube,
-  Linkedin
-} from "lucide-react";
+import { Mail, MapPin, Phone, Instagram, Facebook, Youtube, Linkedin } from "lucide-react";
 import { Logo } from "./components/logo";
 import { FooterCol } from "./components/footer-col";
 import { FooterLink } from "./components/footer-link";
@@ -21,13 +14,7 @@ type FooterProps = React.HTMLAttributes<HTMLElement>;
 
 export function Footer({ className, ...props }: FooterProps) {
   return (
-    <footer
-      className={twMerge(
-        "border-t bg-white text-black",
-        className
-      )}
-      {...props}
-    >
+    <footer className={twMerge("border-t bg-white text-black", className)} {...props}>
       <Newsletter />
 
       <div className="mx-auto max-w-7xl px-6 py-12">
@@ -35,8 +22,8 @@ export function Footer({ className, ...props }: FooterProps) {
           <div>
             <Logo />
             <p className="mt-3 text-sm text-black">
-              Loja online de beleza com curadoria de maquiagem, skincare,
-              cabelos e perfumaria. Qualidade, praticidade e ofertas exclusivas.
+              Loja online de beleza com curadoria de maquiagem, skincare, cabelos e perfumaria.
+              Qualidade, praticidade e ofertas exclusivas.
             </p>
 
             <div className="mt-5 flex items-center gap-3">
@@ -69,9 +56,7 @@ export function Footer({ className, ...props }: FooterProps) {
             <FooterLink href="/collections/batom">Batom</FooterLink>
             <FooterLink href="/collections/base">Base & Corretivo</FooterLink>
             <FooterLink href="/collections/olhos">Sombras & Máscaras</FooterLink>
-            <FooterLink href="/collections/tratamento-facial">
-              Tratamento Facial
-            </FooterLink>
+            <FooterLink href="/collections/tratamento-facial">Tratamento Facial</FooterLink>
             <FooterLink href="/collections/shampoo-condicionador">
               Shampoo & Condicionador
             </FooterLink>
@@ -79,12 +64,8 @@ export function Footer({ className, ...props }: FooterProps) {
           </FooterCol>
 
           <FooterCol title="Contato">
-            <FooterLine icon={<Phone className="h-4 w-4" />}>
-              (11) 99999-0000
-            </FooterLine>
-            <FooterLine icon={<Mail className="h-4 w-4" />}>
-              contato@b8one.com.br
-            </FooterLine>
+            <FooterLine icon={<Phone className="h-4 w-4" />}>(11) 99999-0000</FooterLine>
+            <FooterLine icon={<Mail className="h-4 w-4" />}>contato@b8one.com.br</FooterLine>
             <FooterLine icon={<MapPin className="h-4 w-4" />}>
               Rua Exemplo, 123 — São Paulo/SP
             </FooterLine>
@@ -92,29 +73,17 @@ export function Footer({ className, ...props }: FooterProps) {
         </div>
       </div>
 
-      <div className="bg-[#F9F9F9] border-t-2 border-t-zinc-200">
+      <div className="border-t-2 border-t-zinc-200 bg-[#F9F9F9]">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-sm text-black sm:flex-row">
-          <p>
-            © {new Date().getFullYear()} b8one Store. Todos os direitos
-            reservados.
-          </p>
+          <p>© {new Date().getFullYear()} b8one Store. Todos os direitos reservados.</p>
           <div className="flex items-center gap-6">
-            <Link
-              href="/privacy"
-              className="hover:text-zinc-300 transition-colors"
-            >
+            <Link href="/privacy" className="transition-colors hover:text-zinc-300">
               Privacidade
             </Link>
-            <Link
-              href="/terms"
-              className="hover:text-zinc-300 transition-colors"
-            >
+            <Link href="/terms" className="transition-colors hover:text-zinc-300">
               Termos
             </Link>
-            <Link
-              href="/contact"
-              className="hover:text-zinc-300 transition-colors"
-            >
+            <Link href="/contact" className="transition-colors hover:text-zinc-300">
               Contato
             </Link>
           </div>
@@ -123,11 +92,3 @@ export function Footer({ className, ...props }: FooterProps) {
     </footer>
   );
 }
-
-
-
-
-
-
-
-
