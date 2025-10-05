@@ -6,20 +6,24 @@ import { Button } from "@/components/ui/button";
 
 type FooterMinicartProps = {
   subtotal: number;
-  hasItems: boolean;
+  itemsCount: number;
   clearCart?: () => void;
 };
 
-export function FooterMinicart({ subtotal, hasItems, clearCart }: FooterMinicartProps) {
+export function FooterMinicart({ subtotal, itemsCount, clearCart }: FooterMinicartProps) {
   return (
     <div className="space-y-3 border-t px-5 py-4">
       <div className="flex items-center justify-between">
         <span className="text-sm text-zinc-600">Subtotal</span>
         <span className="text-base font-semibold">{formatToReal(subtotal)}</span>
       </div>
+      <div className="flex items-center justify-between">
+        <span className="text-sm text-zinc-600">Quantidade</span>
+        <span className="text-base font-semibold">{itemsCount}</span>
+      </div>
 
       <div className="flex gap-2">
-        {hasItems && (
+        {itemsCount > 0 && (
           <Button variant="outline" className="flex-1" onClick={() => clearCart?.()}>
             Limpar
           </Button>

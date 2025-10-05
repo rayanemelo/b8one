@@ -51,7 +51,7 @@ export function Minicart() {
           )}
         </div>
 
-        <FooterMinicart subtotal={subtotal} hasItems={hasItems} clearCart={clearCart} />
+        <FooterMinicart subtotal={subtotal} itemsCount={items.length} clearCart={clearCart} />
       </div>
     </SheetContent>
   );
