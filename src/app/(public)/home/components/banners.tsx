@@ -14,26 +14,14 @@ const banners = [
   {
     id: 1,
     title: "Banner 1",
-    imageDesktop: "/images/banners/banner2.webp",
-    imageMobile: "/images/banners/banner2.webp",
+    imageDesktop: "/images/banners/banner-1.jpg",
+    imageMobile: "/images/banners/banner-1.jpg",
   },
   {
     id: 2,
     title: "Banner 2",
-    imageDesktop: "/images/banners/banner1.jpg",
-    imageMobile: "/images/banners/banner1.jpg",
-  },
-  {
-    id: 3,
-    title: "Banner 3",
-    imageDesktop: "",
-    imageMobile: "",
-  },
-  {
-    id: 4,
-    title: "Banner 4",
-    imageDesktop: "",
-    imageMobile: "",
+    imageDesktop: "/images/banners/banner-2.png",
+    imageMobile: "/images/banners/banner-2.png",
   },
 ];
 

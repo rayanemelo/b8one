@@ -12,7 +12,7 @@ export function useProduct() {
     try {
       const response = await fetch(PRODUCTS_API);
       const data: ResponseProduct = await response.json();
-      setProducts(data.products.slice(0, 10));
+      setProducts(data.products.slice(0, 6));
       setIsLoading(false);
     } catch (error) {
       console.error("Failed to fetch products:", error);

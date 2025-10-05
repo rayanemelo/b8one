@@ -26,7 +26,7 @@ export default function OfertasPage() {
         {isLoading ? (
           <SkeletonOfertas />
         ) : (
-          <div className="mx-auto grid w-full grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4 sm:gap-5 lg:gap-6">
+          <div className="mx-auto grid w-full grid-cols-[repeat(auto-fit,minmax(325px,1fr))] gap-4 sm:gap-5 lg:gap-6">
             {visibleProducts.map((product) => (
               <ProductCard key={product.id} {...product} />
             ))}

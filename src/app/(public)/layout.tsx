@@ -14,7 +14,7 @@ export default function PublicLayout({
         <TopBar />
         <Header />
       </div>
-      <main className="mt-[115px] flex min-h-screen w-full flex-col bg-[#F9F9F9]">{children}</main>
+      <main className="mt-[100px] flex min-h-screen w-full flex-col md:mt-[115px]">{children}</main>
       <Suspense>
         <Footer />
       </Suspense>

@@ -73,7 +73,7 @@ export function Footer({ className, ...props }: FooterProps) {
         </div>
       </div>
 
-      <div className="border-t-2 border-t-zinc-200 bg-[#F9F9F9]">
+      <div className="border-t-2 border-t-zinc-200 bg-background">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-sm text-black sm:flex-row">
           <p>© {new Date().getFullYear()} b8one Store. Todos os direitos reservados.</p>
           <div className="flex items-center gap-6">

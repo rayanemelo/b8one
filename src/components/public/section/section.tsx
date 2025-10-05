@@ -11,7 +11,7 @@ export function Section({ title, children, className, ...props }: Props) {
     <section
       {...props}
       className={twMerge(
-        `relative flex flex-col items-center justify-center bg-[#F9F9F9] px-6 py-12`,
+        `relative flex flex-col items-center justify-center px-6 py-12`,
         className,
       )}
     >
