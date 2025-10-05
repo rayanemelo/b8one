@@ -18,7 +18,7 @@ export default function OfertasPage() {
 
   return (
     <div className="mx-auto my-8 w-full max-w-9xl text-center uppercase">
-      <div className="flex flex-col justify-center gap-6">
+      <div className="flex flex-col justify-center gap-6 px-4">
         <BreadcrumbOfertas />
         <TitleSection title="Ofertas da Semana" />
         <ProductSortSelect products={products} onSort={(sorted) => setVisibleProducts(sorted)} />
