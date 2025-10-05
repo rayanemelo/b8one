@@ -55,11 +55,20 @@ export function Offers() {
                 ))}
           </CarouselContent>
 
-          <CarouselPrevious className="h-10 w-10 border-none bg-black text-white hover:bg-black/50 hover:text-white">
+          <CarouselPrevious
+            aria-label="Anterior"
+            className="h-10 w-10 border-none bg-black text-white hover:bg-black/50 hover:text-white"
+          >
             <ChevronLeftIcon strokeWidth={2.5} />
+            <span className="sr-only">Anterior</span>
           </CarouselPrevious>
-          <CarouselNext className="h-10 w-10 border-none bg-black text-white hover:bg-black/50 hover:text-white">
+
+          <CarouselNext
+            aria-label="Próximo"
+            className="h-10 w-10 border-none bg-black text-white hover:bg-black/50 hover:text-white"
+          >
             <ChevronRightIcon strokeWidth={2.5} />
+            <span className="sr-only">Próximo</span>
           </CarouselNext>
         </Carousel>
 

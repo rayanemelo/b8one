@@ -66,10 +66,19 @@ export function Banners() {
           );
         })}
       </CarouselContent>
-      <CarouselPrevious className="absolute left-4 top-1/2 z-10 h-10 w-10 -translate-y-1/2 transform border-none bg-black text-white hover:bg-black/50 hover:text-white">
+      <CarouselPrevious
+        aria-label="Anterior"
+        title="Anterior"
+        className="absolute left-4 top-1/2 z-10 h-10 w-10 -translate-y-1/2 transform border-none bg-black text-white hover:bg-black/50 hover:text-white"
+      >
         <ChevronLeftIcon strokeWidth={2.5} />
       </CarouselPrevious>
-      <CarouselNext className="absolute right-4 top-1/2 z-10 h-10 w-10 -translate-y-1/2 transform border-none bg-black text-white hover:bg-black/50 hover:text-white">
+
+      <CarouselNext
+        aria-label="Próximo"
+        title="Próximo"
+        className="absolute right-4 top-1/2 z-10 h-10 w-10 -translate-y-1/2 transform border-none bg-black text-white hover:bg-black/50 hover:text-white"
+      >
         <ChevronRightIcon strokeWidth={2.5} />
       </CarouselNext>
     </Carousel>

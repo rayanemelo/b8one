@@ -1,6 +1,9 @@
 # E-commerce
 
-Este projeto foi desenvolvido para simular uma loja virtual com páginas e componentes essenciais de um e-commerce moderno.
+Este projeto foi desenvolvido para simular uma loja virtual com páginas e componentes essenciais de um e-commerce moderno.  
+Você pode visualizar o projeto em funcionamento através do link abaixo:
+
+👉 **[Acessar o site](https://b8one-eight.vercel.app/)**
 
 ## Funcionalidades
 
