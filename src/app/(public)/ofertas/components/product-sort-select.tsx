@@ -40,7 +40,7 @@ export function ProductSortSelect({
           value={current}
           onChange={(e) => handleChange(e.target.value)}
           aria-label="Ordenar produtos"
-          className="block h-10 w-full appearance-none border border-black bg-white pl-3 pr-10 text-sm text-zinc-900 shadow-sm outline-none transition"
+          className="block h-10 w-full cursor-pointer appearance-none border border-black bg-white pl-3 pr-10 text-sm text-zinc-900 shadow-sm outline-none transition"
         >
           <option value="relevance">Relevância</option>
           <option value="price_desc">Preço: do maior ao menor</option>

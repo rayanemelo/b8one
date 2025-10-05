@@ -5,8 +5,11 @@ import { Card } from "@/components/public/card/card";
 import { AddToCartButton } from "../add-to-cart-button/add-to-cart-button";
 import { formatToReal } from "@/utils/money";
 import { WishlistButton } from "../wishlist-button/wishlist-button";
+import { useCart } from "@/store/useCart";
 
 const ProductCard = React.forwardRef<HTMLDivElement, Product>((product, ref) => {
+  const { addToCart } = useCart();
+
   return (
     <div>
       <Card ref={ref} key={product.id} className="cursor-pointer border-none p-4 transition">
@@ -28,7 +31,7 @@ const ProductCard = React.forwardRef<HTMLDivElement, Product>((product, ref) => 
         <p className="my-1 text-left text-lg font-bold text-black">{formatToReal(product.price)}</p>
         <AddToCartButton
           onClick={() => {
-            console.log(`Adicionado ${product.title} ao carrinho`);
+            addToCart(product);
           }}
         />
       </Card>
